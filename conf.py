@@ -21,7 +21,7 @@ BLOG_AUTHOR = "Narendra Mukherjee"  # (translatable)
 BLOG_TITLE = "Narendra Mukherjee"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://example.com/"
+SITE_URL = "https://narendramukherjee.github.io"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://example.com/"
@@ -137,7 +137,7 @@ NAVIGATION_LINKS = {
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
-	("/posts/", "Blog")
+	("/blog/", "Blog")
     ),
 }
 
@@ -183,10 +183,10 @@ THEME_COLOR = '#5670d4'
 #     )
 
 POSTS = (
-    ("posts/*.rst", "posts", "post.tmpl"),
-    ("posts/*.md", "posts", "post.tmpl"),
-    ("posts/*.txt", "posts", "post.tmpl"),
-    ("posts/*.html", "posts", "post.tmpl"),
+    ("posts/*.rst", "blog", "post.tmpl"),
+    ("posts/*.md", "blog", "post.tmpl"),
+    ("posts/*.txt", "blog", "post.tmpl"),
+    ("posts/*.html", "blog", "post.tmpl"),
 )
 PAGES = (
     ("pages/*.rst", "", "page.tmpl"),
