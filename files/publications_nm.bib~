@@ -1,0 +1,69 @@
+@article{mukherjee2012model,
+  title={A model based on oscillatory threshold and build-up of a developmental substance explains gating of adult emergence in Drosophila melanogaster},
+  author={Mukherjee, Narendra and Kannan, Nisha N and Yadav, Pankaj and Sharma, Vijay Kumar},
+  journal={Journal of Experimental Biology},
+  volume={215},
+  number={17},
+  pages={2960--2968},
+  year={2012},
+  publisher={The Company of Biologists Ltd},
+  fulltext={http://jeb.biologists.org/content/jexbio/215/17/2960.full.pdf}
+}
+
+@article{kannan2012robustness,
+  title={Robustness of circadian timing systems evolves in the fruit fly Drosophila melanogaster as a correlated response to selection for adult emergence in a narrow window of time},
+  author={Kannan, Nisha N and Mukherjee, Narendra and Sharma, Vijay Kumar},
+  journal={Chronobiology international},
+  volume={29},
+  number={10},
+  pages={1312--1328},
+  year={2012},
+  publisher={Taylor \& Francis},
+  abstract={Robustness is a fundamental property of biological timing systems that is likely to ensure their efficient functioning under a wide range of environmental conditions. Here we report the findings of our study aimed at examining robustness of circadian clocks in fruit fly Drosophila melanogaster populations selected to emerge as adults within a narrow window of time. Previously, we have reported that such flies display enhanced synchrony, accuracy, and precision in their adult emergence and activity/rest rhythms. Since it is expected that accurate and precise circadian clocks may confer enhanced stability in circadian time-keeping, we decided to examine robustness in circadian rhythms of flies from the selected populations by subjecting them to a variety of environmental conditions comprising of a range of photoperiods, light intensities, ambient temperatures, and constant darkness. The results revealed that adult emergence and activity/rest rhythms of flies from the selected stocks were more robust than controls, as they displayed enhanced stability under a wide variety of environmental conditions. These results suggest that selection for adult emergence within a narrow window of time results in the evolution of robustness in circadian timing systems of the fruit fly D. melanogaster.}
+}
+
+@article{varma2013strong,
+  title={Strong (Type 0) phase resetting of activity-rest rhythm in fruit flies, Drosophila melanogaster, at low temperature},
+  author={Varma, Vishwanath and Mukherjee, Narendra and Kannan, Nisha N and Sharma, Vijay Kumar},
+  journal={Journal of Biological Rhythms},
+  volume={28},
+  number={6},
+  pages={380--389},
+  year={2013},
+  publisher={Sage Publications Sage CA: Los Angeles, CA}
+}
+
+@article{sadacca2016behavioral,
+  title={The behavioral relevance of cortical neural ensemble responses emerges suddenly},
+  author={Sadacca, Brian F and Mukherjee, Narendra and Vladusich, Tony and Li, Jennifer X and Katz, Donald B and Miller, Paul},
+  journal={Journal of Neuroscience},
+  volume={36},
+  number={3},
+  pages={655--669},
+  year={2016},
+  publisher={Soc Neuroscience},
+  abstract={Whereas many laboratory-studied decisions involve a highly trained animal identifying an ambiguous stimulus, many naturalistic decisions do not. Consumption decisions, for instance, involve determining whether to eject or consume an already identified stimulus in the mouth and are decisions that can be made without training. By standard analyses, rodent cortical single-neuron taste responses come to predict such consumption decisions across the 500 ms preceding the consumption or rejection itself; decision-related firing emerges well after stimulus identification. Analyzing single-trial ensemble activity using hidden Markov models, we show these decision-related cortical responses to be part of a reliable sequence of states (each defined by the firing rates within the ensemble) separated by brief state-to-state transitions, the latencies of which vary widely between trials. When we aligned data to the onset of the (late-appearing) state that dominates during the time period in which single-neuron firing is correlated to taste palatability, the apparent ramp in stimulus-aligned choice-related firing was shown to be a much more precipitous coherent jump. This jump in choice-related firing resembled a step function more than it did the output of a standard (ramping) decision-making model, and provided a robust prediction of decision latency in single trials. Together, these results demonstrate that activity related to naturalistic consumption decisions emerges nearly instantaneously in cortical ensembles.}
+}
+
+@InProceedings{ narendra_mukherjee-proc-scipy-2017,
+  author    = { Narendra Mukherjee and Joseph Wachutka and Donald B Katz },
+  title     = { {P}ython meets systems neuroscience: affordable, scalable and open-source electrophysiology in awake, behaving rodents },
+  booktitle = { {P}roceedings of the 16th {P}ython in {S}cience {C}onference },
+  pages     = { 98 - 105 },
+  year      = { 2017 },
+  editor    = { {K}aty {H}uff and {D}avid {L}ippa and {D}illon {N}iederhut and {M} {P}acer },
+  doi       = { 10.25080/shinma-7f4c6e7-00e }
+}
+
+@article{flores2018role,
+  title={The role of the gustatory cortex in incidental experience-evoked enhancement of later taste learning},
+  author={Flores, Veronica L and Parmet, Tamar and Mukherjee, Narendra and Nelson, Sacha and Katz, Donald B and Levitan, David},
+  journal={Learning \& Memory},
+  volume={25},
+  number={11},
+  pages={587--600},
+  year={2018},
+  publisher={Cold Spring Harbor Lab}
+}
+
+

@@ -137,7 +137,11 @@ NAVIGATION_LINKS = {
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
-	("/blog/", "Blog")
+	("/blog/", "Blog"),
+	("CV.pdf", "CV"),
+	((("/research/current-research/index.html", "Current Research"),
+	("/research/publication-list/index.html", "Publications")),
+	"Research")
     ),
 }
 
@@ -189,10 +193,12 @@ POSTS = (
     ("posts/*.html", "blog", "post.tmpl"),
 )
 PAGES = (
-    ("pages/*.rst", "", "page.tmpl"),
+    ("pages/home.rst", "", "page.tmpl"),
     ("pages/*.md", "", "page.tmpl"),
     ("pages/*.txt", "", "page.tmpl"),
     ("pages/*.html", "", "page.tmpl"),
+    ("pages/research/current-research.rst", "research", "page.tmpl"),
+    ("pages/research/publication-list.rst", "research", "page.tmpl")
 )
 
 
