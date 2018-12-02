@@ -138,7 +138,7 @@ NAVIGATION_LINKS = {
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
 	("/blog/", "Blog"),
-	("CV.pdf", "CV"),
+	("/CV.pdf", "CV"),
 	((("/research/current-research/index.html", "Current Research"),
 	("/research/publication-list/index.html", "Publications")),
 	"Research")
