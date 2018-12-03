@@ -15,7 +15,7 @@ Concurrently, I have also been involved in developing a flexible open-source ele
 
 Previously, I worked with `Vijay Kumar Sharma`_ and `Sheeba Vasu`_ in the Evolutionary and Organismal Biology (EOBU) unit of the Jawaharlal Nehru Center for Advanced Scientific Research (JNCASR) in Bangalore. I studied eclosion and activity circadian rhythms in fruit flies from a dynamical systems perspective (based on Arthur Winfree's ideas).
 
-For more information, read my `CV <CV.pdf>`_, look at my `current research`_ and browse my `publication list`_.
+For more information, read my `CV <CV.pdf>`_, look at my `current research`_, browse my `publication list`_ or explore my projects on `Github`_.
 
 .. _Howard Hughes Medical Institute (HHMI) Predoctoral Fellow: https://www.hhmi.org/news/hhmi-selects-46-international-predoctoral-fellows
 
@@ -35,4 +35,4 @@ For more information, read my `CV <CV.pdf>`_, look at my `current research`_ and
 
 .. _publication list: research/publications/publication-list/index.html
 
-    
+.. _Github: https://github.com/narendramukherjee    
