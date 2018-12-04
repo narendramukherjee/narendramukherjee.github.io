@@ -29,6 +29,7 @@
   pages={1312--1328},
   year={2012},
   publisher={Taylor \& Francis},
+  fulltext={/publications/kannanetal2012_ci.pdf},
   abstract={Robustness is a fundamental property of biological timing systems that is likely to ensure their efficient functioning under a wide range of environmental conditions. Here we report the findings of our study aimed at examining robustness of circadian clocks in fruit fly Drosophila melanogaster populations selected to emerge as adults within a narrow window of time. Previously, we have reported that such flies display enhanced synchrony, accuracy, and precision in their adult emergence and activity/rest rhythms. Since it is expected that accurate and precise circadian clocks may confer enhanced stability in circadian time-keeping, we decided to examine robustness in circadian rhythms of flies from the selected populations by subjecting them to a variety of environmental conditions comprising of a range of photoperiods, light intensities, ambient temperatures, and constant darkness. The results revealed that adult emergence and activity/rest rhythms of flies from the selected stocks were more robust than controls, as they displayed enhanced stability under a wide variety of environmental conditions. These results suggest that selection for adult emergence within a narrow window of time results in the evolution of robustness in circadian timing systems of the fruit fly D. melanogaster.}
 }
 
@@ -68,6 +69,17 @@
   doi       = { 10.25080/shinma-7f4c6e7-00e },
   fulltext={/publications/mukherjeeetal2017_scipy.pdf},
   abstract  = {In-vivo electrophysiology, the recording of neurons in the brains of awake, behaving animals, is currently undergoing paradigm shifts. There is a push towards moving to open-source technologies that can: 1) be adjusted to specific experiments; 2) be shared with ease; and 3) more affordably record from larger numbers of electrodes simultaneously. Here we describe our construction of a system that satisfies these three desirable properties using the scientific Python stack and Linux. Using a Raspberry Pi to control experimental paradigms, we build a completely open-source, HDF5-based analysis (spike sorting) toolkit in Python. This toolkit can be easily parallelized and scales to incorporate increasing electrode counts and longer recordings. Our rig costs about \$5000, an order of magnitude less than many comparable commercially available electrophysiology systems.}
+}
+
+@article {Mukherjee486043,
+	author = {Mukherjee, Narendra and Wachutka, Joseph and Katz, Donald B},
+	title = {Dynamical structure of cortical taste responses revealed by precisely-timed optogenetic perturbation},
+	year = {2018},
+	doi = {10.1101/486043},
+	publisher = {Cold Spring Harbor Laboratory},
+	abstract = {The purpose of perception is to drive action - during tasting, for instance, every stimulus necessarily drives either swallowing or ejecting ("gapes"). Taste responses in the rodent primary gustatory cortex (GC) span this sensorimotor divide, progressing through a series of firing rate epochs that culminate in the emergence of palatability-related firing. Population analyses reveal palatability-related activity to appear through sudden and coherent ensemble transitions that, despite occuring between 0.5s and 1.5s on individual trials, reliably precede gaping onset by 200-300ms. Here, we tested whether these transitions actually drive gaping, delivering 0.5s perturbations of GC at various points in tasting trials. Perturbations significantly delayed gaping, but only when they arrived before palatability coding. Thus, perturbation had no impact on trials in which the transition had already occurred, but the identical perturbation delayed gaping on trials in which it hadn{\textquoteright}t. Our results suggest a distributed attractor network model of taste processing, and a dynamical role for cortex in driving motor behavior.},
+	fulltext = {https://www.biorxiv.org/content/early/2018/12/03/486043},
+	journal = {bioRxiv}
 }
 
 @article{flores2018role,
