@@ -31,8 +31,8 @@ For more information, read my `CV <CV.pdf>`_, look at my `current research`_, br
 
 .. _Sheeba Vasu: http://www.jncasr.ac.in/sheeba/
 
-.. _current research: research/current/current-research/index.html
+.. _current research: /research/current-research/index.html
 
-.. _publication list: research/publications/publication-list/index.html
+.. _publication list: /research/publication-list/index.html
 
 .. _Github: https://github.com/narendramukherjee    
