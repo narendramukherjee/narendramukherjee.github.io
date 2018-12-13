@@ -14,6 +14,10 @@
   <lastmod>2018-12-12T17:47:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://narendramukherjee.github.io/categories/latex.xml</loc>
+  <lastmod>2018-12-13T02:58:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://narendramukherjee.github.io/categories/neuroscience.xml</loc>
   <lastmod>2018-12-12T17:47:00Z</lastmod>
  </sitemap>
@@ -23,14 +27,18 @@
  </sitemap>
  <sitemap>
   <loc>https://narendramukherjee.github.io/categories/python.xml</loc>
-  <lastmod>2018-12-12T17:47:00Z</lastmod>
+  <lastmod>2018-12-13T03:08:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://narendramukherjee.github.io/categories/ubuntu.xml</loc>
+  <lastmod>2018-12-13T02:58:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://narendramukherjee.github.io/rss.xml</loc>
-  <lastmod>2018-12-12T17:47:00Z</lastmod>
+  <lastmod>2018-12-13T03:08:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://narendramukherjee.github.io/sitemap.xml</loc>
-  <lastmod>2018-12-12T17:47:00Z</lastmod>
+  <lastmod>2018-12-13T03:08:00Z</lastmod>
  </sitemap>
 </sitemapindex>

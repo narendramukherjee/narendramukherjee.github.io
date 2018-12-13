@@ -95,6 +95,52 @@
 <p>Here are the <a class="reference external" href="../boston_python_talk/index.html">slides</a> for my talk at Boston Python. Please do read about our <a class="reference external" href="https://sites.google.com/a/brandeis.edu/katzlab/technology">Raspberry Pi based hardware setup</a> and our recent <a class="reference external" href="http://conference.scipy.org/proceedings/scipy2017/narendra_mukherjee.html">Scipy Paper</a> describing our HDF5-based data management and analysis pipeline.</p>
 </div>
     </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="string-completion-as-you-move-to-python-3-or-how-curly-braces-became-important/" class="u-url">String completion as you move to Python 3 (OR, how curly braces became important)</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Narendra Mukherjee
+            </span></p>
+            <p class="dateline"><a href="string-completion-as-you-move-to-python-3-or-how-curly-braces-became-important/" rel="bookmark"><time class="published dt-published" datetime="2017-02-03T22:00:23-05:00" title="2017-02-03 22:00">2017-02-03 22:00</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>I am currently in the midst of (<strong>FINALLY!!</strong>) making the shift from trusted Python 2.7 to Python 3.x (while recovering from an extended holiday thanks to a somewhat lengthy visa renewal process). Making the shift itself is pretty simple, thanks to a nifty, command line tool built within the Python standard library itself (at least on Linux) called, very simply, <a class="reference external" href="https://docs.python.org/2/library/2to3.html">2to3</a>.</p>
+<p>Its always a good idea to keep backups of legacy code (of course!), and to actually write changes to file, so the command goes something like:</p>
+<pre class="literal-block">
+2to3 -w *.py
+</pre>
+<p>I am in the habit of using % as a placeholder for string completion in Python 2.x. That behavior doesn't go out of use entirely in Python 3.x, but using the str.format() method is recommended instead - see more <a class="reference external" href="https://docs.python.org/2/library/string.html#format-string-syntax">details</a>.</p>
+<p>Most of string completion code worked out of the box in Python 3 - I only realized that the norm had changed when I had curly braces "<strong>{}</strong>" in my strings. It turns out that curly braces have a special meaning in Python 3 strings - they are placeholders, in addition to the % sign. The format goes something like this:</p>
+<pre class="code python"><a name="rest_code_3dbd3ee660dc46f99dec897719a715ac-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s2">"my string {:d}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="rest_code_3dbd3ee660dc46f99dec897719a715ac-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s1">'my string 1'</span>
+</pre>
+<p>However, the braces themselves need to be encapsulated in a second set of braces to be printed. So, for example:</p>
+<pre class="code python"><a name="rest_code_565dddc15e8a4a9dac2ae32450f1854e-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s2">"my string {{{:d}}}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="rest_code_565dddc15e8a4a9dac2ae32450f1854e-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s1">'my string {1}'</span>
+</pre>
+<p>In brief, the braces outside the number placeholder <code>{:d}</code> have to be encapsulated in a second (or third, depending on how you look at it) set of braces :)</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="installing-the-latest-version-of-texlive-2016-right-now-on-ubuntu-without-a-headache/" class="u-url">Installing the latest version of Texlive (2016 right now) on Ubuntu without a headache</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Narendra Mukherjee
+            </span></p>
+            <p class="dateline"><a href="installing-the-latest-version-of-texlive-2016-right-now-on-ubuntu-without-a-headache/" rel="bookmark"><time class="published dt-published" datetime="2016-11-04T21:50:19-05:00" title="2016-11-04 21:50">2016-11-04 21:50</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Texlive is the most convenient way to get up and running with LaTeX on Linux (specifically Ubuntu, in this case) systems. A simple <code>sudo apt-get install texlive</code> does the trick - however, there's an important catch: Debian versions of texlive traditionally lag behind. Ubuntu 14.04 and 16.04 ship with the 2013 and 2015 versions respectively. So, when I had to look into updating texlive on my 14.04 system, I had no recourse but to try to attempt installing 'vanilla' texlive straight from CTAN, and of course, risk the consequences!</p>
+<p>Turns out that installing texlive on CTAN can be a complicated mess of steps that need to be done in exactly the right order - but I came across this supremely helpful <a class="reference external" href="https://github.com/scottkosty/install-tl-ubuntu">Github repo</a> from Scott Kostyshak that makes everything super simple. One simply needs to clone this repository, and follow the steps in the readme, and things work smoothly (I've tested this on my Ubuntu 14.04 system).</p>
+<p>Here are the steps:</p>
+<pre class="literal-block">
+git clone https://github.com/scottkosty/install-tl-ubuntu
+cd install-tl-ubuntu
+sudo ./install-tl-ubuntu
+</pre>
+<p>NOTE: If you have the Debian version of texlive already installed (2013 in the case of Ubuntu 14.04 - to check your texlive version, say 'tex --version' at the terminal), you will need to remove it with <code>sudo apt-get remove --purge texlive*</code> first.</p>
+</div>
+    </div>
     </article>
 </div>
 
