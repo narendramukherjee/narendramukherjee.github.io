@@ -2,7 +2,7 @@
 .. slug: installing-the-latest-version-of-texlive-2016-right-now-on-ubuntu-without-a-headache
 .. date: 2016-11-04 21:50:19 UTC-05:00
 .. tags: Ubuntu, LaTeX
-.. category: 
+.. category: Blog 
 .. link: 
 .. description: 
 .. type: text

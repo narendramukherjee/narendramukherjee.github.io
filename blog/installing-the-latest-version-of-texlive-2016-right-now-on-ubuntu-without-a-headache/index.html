@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,54 +26,50 @@
 
 <!-- Menubar -->
 
-<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark bg-dark
+"><div class="container">
 <!-- This keeps the margins nice -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="https://narendramukherjee.github.io/">
+        <a class="navbar-brand" href="https://narendramukherjee.github.io/">
 
-                <span id="blog-title">Narendra Mukherjee</span>
-            </a>
-        </div>
-<!-- /.navbar-header -->
-        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
-            <ul class="nav navbar-nav">
-<li>
-<a href="../../archive.html">Archive</a>
+            <span id="blog-title">Narendra Mukherjee</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a href="../../archive.html" class="nav-link">Archive</a>
                 </li>
-<li>
-<a href="../../categories/">Tags</a>
+<li class="nav-item">
+<a href="../../categories/" class="nav-link">Tags</a>
                 </li>
-<li>
-<a href="../../rss.xml">RSS feed</a>
+<li class="nav-item">
+<a href="../../rss.xml" class="nav-link">RSS feed</a>
                 </li>
-<li>
-<a href="../">Blog</a>
+<li class="nav-item">
+<a href="../" class="nav-link">Blog</a>
                 </li>
-<li>
-<a href="../../CV.pdf">CV</a>
+<li class="nav-item">
+<a href="../../CV.pdf" class="nav-link">CV</a>
             </li>
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-<li>
-<a href="../../research/current-research/index.html">Current Research</a>
-                    </li>
-<li>
-<a href="../../research/publication-list/index.html">Publications</a>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research</a>
+            <div class="dropdown-menu">
+                    <a href="../../research/phd-research/index.html" class="dropdown-item">PhD Research</a>
+                    <a href="../../research/publication-list/index.html" class="dropdown-item">Publications</a>
+            </div>
+
+                
             </li>
 </ul>
-</li>
-</ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-    <a href="index.rst" id="sourcelink">Source</a>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+    <a href="index.rst" id="sourcelink" class="nav-link">Source</a>
     </li>
+
 
                 
             </ul>
@@ -83,16 +80,19 @@
 </nav><!-- End of Menubar --><div class="container" id="content" role="main">
     <div class="body-content">
         <!--Body content-->
-        <div class="row">
-            
-            
+        
+        
+        
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Installing the latest version of Texlive (2016 right now) on Ubuntu without a headache</a></h1>
 
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
                     Narendra Mukherjee
             </span></p>
-            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2016-11-04T21:50:19-05:00" itemprop="datePublished" title="2016-11-04 21:50">2016-11-04 21:50</time></a></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2016-11-04T21:50:19-05:00" itemprop="datePublished" title="2016-11-04 21:50">2016-11-04 21:50</time></a>
+            </p>
             
         <p class="sourceline"><a href="index.rst" class="sourcelink">Source</a></p>
 
@@ -104,11 +104,9 @@
 <p>Texlive is the most convenient way to get up and running with LaTeX on Linux (specifically Ubuntu, in this case) systems. A simple <code>sudo apt-get install texlive</code> does the trick - however, there's an important catch: Debian versions of texlive traditionally lag behind. Ubuntu 14.04 and 16.04 ship with the 2013 and 2015 versions respectively. So, when I had to look into updating texlive on my 14.04 system, I had no recourse but to try to attempt installing 'vanilla' texlive straight from CTAN, and of course, risk the consequences!</p>
 <p>Turns out that installing texlive on CTAN can be a complicated mess of steps that need to be done in exactly the right order - but I came across this supremely helpful <a class="reference external" href="https://github.com/scottkosty/install-tl-ubuntu">Github repo</a> from Scott Kostyshak that makes everything super simple. One simply needs to clone this repository, and follow the steps in the readme, and things work smoothly (I've tested this on my Ubuntu 14.04 system).</p>
 <p>Here are the steps:</p>
-<pre class="literal-block">
-git clone https://github.com/scottkosty/install-tl-ubuntu
+<pre class="literal-block">git clone https://github.com/scottkosty/install-tl-ubuntu
 cd install-tl-ubuntu
-sudo ./install-tl-ubuntu
-</pre>
+sudo ./install-tl-ubuntu</pre>
 <p>NOTE: If you have the Debian version of texlive already installed (2013 in the case of Ubuntu 14.04 - to check your texlive version, say 'tex --version' at the terminal), you will need to remove it with <code>sudo apt-get remove --purge texlive*</code> first.</p>
 </div>
     </div>
@@ -120,21 +118,21 @@ sudo ./install-tl-ubuntu
 <li class="next">
                 <a href="../string-completion-as-you-move-to-python-3-or-how-curly-braces-became-important/" rel="next" title="String completion as you move to Python 3 (OR, how curly braces became important)">Next post</a>
             </li>
-        </ul></nav></aside></article>
-</div>
-        <!--End of body content-->
-
-        <footer id="footer">
-            Contents © 2018         <a href="mailto:narendra.mukherjee@gmail.com">Narendra Mukherjee</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+        </ul></nav></aside></article><!--End of body content--><footer id="footer">
+            Contents © 2019         <a href="mailto:narendra.mukherjee@gmail.com">Narendra Mukherjee</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
             
         </footer>
 </div>
 </div>
 
 
-            <script src="../../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
-    moment.locale("en");
-    fancydates(0, "YYYY-MM-DD HH:mm");
-    </script><!-- end fancy dates -->
+        <script src="../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
 </body>
 </html>

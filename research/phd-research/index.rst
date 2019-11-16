@@ -1,10 +1,10 @@
-.. title: Current Research
-.. slug: current-research
+.. title: PhD Research
+.. slug: phd-research
 .. date: 2018-01-18 10:07:37 UTC-05:00
 .. tags: Neuroscience, Electrophysiology, Taste, Dynamical Systems, Python
 .. category: Research
 .. link: 
-.. description: Current research page
+.. description: PhD research page
 .. type: text
 
 Taste stimuli, in contrast to other sensory modalities (like vision or hearing), are unique in the degree of behavioral information they carry - an animal necessarily has to decide to consume or reject a taste in the mouth. In my PhD thesis research with Prof. Donald Katz, I study large-scale neural activity patterns in the primary taste cortex of awake, behaving rodents in the context of their consumption decisions. This work has involved the open-source technological development of both an affordable hardware system that can perform large-scale multi-electrode recordings in rodents and analysis software that can process the large streams of neural voltage data flowing in from the hardware. To learn more about these technological projects, please read our `Scipy 2017 paper </publications/mukherjeeetal2017_scipy.pdf>`_.  

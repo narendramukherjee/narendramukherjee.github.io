@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,54 +26,50 @@
 
 <!-- Menubar -->
 
-<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark bg-dark
+"><div class="container">
 <!-- This keeps the margins nice -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="https://narendramukherjee.github.io/">
+        <a class="navbar-brand" href="https://narendramukherjee.github.io/">
 
-                <span id="blog-title">Narendra Mukherjee</span>
-            </a>
-        </div>
-<!-- /.navbar-header -->
-        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
-            <ul class="nav navbar-nav">
-<li>
-<a href="../../archive.html">Archive</a>
+            <span id="blog-title">Narendra Mukherjee</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a href="../../archive.html" class="nav-link">Archive</a>
                 </li>
-<li>
-<a href="../../categories/">Tags</a>
+<li class="nav-item">
+<a href="../../categories/" class="nav-link">Tags</a>
                 </li>
-<li>
-<a href="../../rss.xml">RSS feed</a>
+<li class="nav-item">
+<a href="../../rss.xml" class="nav-link">RSS feed</a>
                 </li>
-<li>
-<a href="../">Blog</a>
+<li class="nav-item">
+<a href="../" class="nav-link">Blog</a>
                 </li>
-<li>
-<a href="../../CV.pdf">CV</a>
+<li class="nav-item">
+<a href="../../CV.pdf" class="nav-link">CV</a>
             </li>
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-<li>
-<a href="../../research/current-research/index.html">Current Research</a>
-                    </li>
-<li>
-<a href="../../research/publication-list/index.html">Publications</a>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research</a>
+            <div class="dropdown-menu">
+                    <a href="../../research/phd-research/index.html" class="dropdown-item">PhD Research</a>
+                    <a href="../../research/publication-list/index.html" class="dropdown-item">Publications</a>
+            </div>
+
+                
             </li>
 </ul>
-</li>
-</ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-    <a href="index.rst" id="sourcelink">Source</a>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+    <a href="index.rst" id="sourcelink" class="nav-link">Source</a>
     </li>
+
 
                 
             </ul>
@@ -83,16 +80,19 @@
 </nav><!-- End of Menubar --><div class="container" id="content" role="main">
     <div class="body-content">
         <!--Body content-->
-        <div class="row">
-            
-            
+        
+        
+        
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">String completion as you move to Python 3 (OR, how curly braces became important)</a></h1>
 
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
                     Narendra Mukherjee
             </span></p>
-            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2017-02-03T22:00:23-05:00" itemprop="datePublished" title="2017-02-03 22:00">2017-02-03 22:00</time></a></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2017-02-03T22:00:23-05:00" itemprop="datePublished" title="2017-02-03 22:00">2017-02-03 22:00</time></a>
+            </p>
             
         <p class="sourceline"><a href="index.rst" class="sourcelink">Source</a></p>
 
@@ -103,17 +103,15 @@
     <div>
 <p>I am currently in the midst of (<strong>FINALLY!!</strong>) making the shift from trusted Python 2.7 to Python 3.x (while recovering from an extended holiday thanks to a somewhat lengthy visa renewal process). Making the shift itself is pretty simple, thanks to a nifty, command line tool built within the Python standard library itself (at least on Linux) called, very simply, <a class="reference external" href="https://docs.python.org/2/library/2to3.html">2to3</a>.</p>
 <p>Its always a good idea to keep backups of legacy code (of course!), and to actually write changes to file, so the command goes something like:</p>
-<pre class="literal-block">
-2to3 -w *.py
-</pre>
+<pre class="literal-block">2to3 -w *.py</pre>
 <p>I am in the habit of using % as a placeholder for string completion in Python 2.x. That behavior doesn't go out of use entirely in Python 3.x, but using the str.format() method is recommended instead - see more <a class="reference external" href="https://docs.python.org/2/library/string.html#format-string-syntax">details</a>.</p>
 <p>Most of string completion code worked out of the box in Python 3 - I only realized that the norm had changed when I had curly braces "<strong>{}</strong>" in my strings. It turns out that curly braces have a special meaning in Python 3 strings - they are placeholders, in addition to the % sign. The format goes something like this:</p>
-<pre class="code python"><a name="rest_code_3dbd3ee660dc46f99dec897719a715ac-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s2">"my string {:d}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<a name="rest_code_3dbd3ee660dc46f99dec897719a715ac-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s1">'my string 1'</span>
+<pre class="code python"><a name="rest_code_9dfdcf0d52664b78842d3fe2b2afa5d2-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s2">"my string {:d}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="rest_code_9dfdcf0d52664b78842d3fe2b2afa5d2-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s1">'my string 1'</span>
 </pre>
 <p>However, the braces themselves need to be encapsulated in a second set of braces to be printed. So, for example:</p>
-<pre class="code python"><a name="rest_code_565dddc15e8a4a9dac2ae32450f1854e-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s2">"my string {{{:d}}}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<a name="rest_code_565dddc15e8a4a9dac2ae32450f1854e-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s1">'my string {1}'</span>
+<pre class="code python"><a name="rest_code_af31aec6fdf847328de7cf65b40a7f32-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s2">"my string {{{:d}}}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="rest_code_af31aec6fdf847328de7cf65b40a7f32-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s1">'my string {1}'</span>
 </pre>
 <p>In brief, the braces outside the number placeholder <code>{:d}</code> have to be encapsulated in a second (or third, depending on how you look at it) set of braces :)</p>
 </div>
@@ -128,21 +126,21 @@
             <li class="next">
                 <a href="../open-source-neuroscience-at-boston-python/" rel="next" title="Open source neuroscience at Boston Python">Next post</a>
             </li>
-        </ul></nav></aside></article>
-</div>
-        <!--End of body content-->
-
-        <footer id="footer">
-            Contents © 2018         <a href="mailto:narendra.mukherjee@gmail.com">Narendra Mukherjee</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+        </ul></nav></aside></article><!--End of body content--><footer id="footer">
+            Contents © 2019         <a href="mailto:narendra.mukherjee@gmail.com">Narendra Mukherjee</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
             
         </footer>
 </div>
 </div>
 
 
-            <script src="../../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
-    moment.locale("en");
-    fancydates(0, "YYYY-MM-DD HH:mm");
-    </script><!-- end fancy dates -->
+        <script src="../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
 </body>
 </html>
