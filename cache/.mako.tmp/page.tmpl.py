@@ -1,15 +1,15 @@
-# -*- coding:ascii -*-
+# -*- coding:utf-8 -*-
 from mako import runtime, filters, cache
 UNDEFINED = runtime.UNDEFINED
 STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1544670963.4580812
+_modified_time = 1573927430.7751663
 _enable_loop = True
-_template_filename = '/home/narendra/anaconda2/envs/website/lib/python3.6/site-packages/nikola/data/themes/base/templates/page.tmpl'
+_template_filename = '/home/narendra/anaconda3/envs/website/lib/python3.8/site-packages/nikola/data/themes/base/templates/page.tmpl'
 _template_uri = 'page.tmpl'
-_source_encoding = 'ascii'
+_source_encoding = 'utf-8'
 _exports = []
 
 
@@ -37,6 +37,6 @@ def render_body(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/home/narendra/anaconda2/envs/website/lib/python3.6/site-packages/nikola/data/themes/base/templates/page.tmpl", "uri": "page.tmpl", "source_encoding": "ascii", "line_map": {"27": 0, "32": 1, "38": 32}}
+{"filename": "/home/narendra/anaconda3/envs/website/lib/python3.8/site-packages/nikola/data/themes/base/templates/page.tmpl", "uri": "page.tmpl", "source_encoding": "utf-8", "line_map": {"27": 0, "32": 1, "38": 32}}
 __M_END_METADATA
 """

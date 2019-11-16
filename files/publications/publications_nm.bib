@@ -74,15 +74,16 @@
   abstract  = {In-vivo electrophysiology, the recording of neurons in the brains of awake, behaving animals, is currently undergoing paradigm shifts. There is a push towards moving to open-source technologies that can: 1) be adjusted to specific experiments; 2) be shared with ease; and 3) more affordably record from larger numbers of electrodes simultaneously. Here we describe our construction of a system that satisfies these three desirable properties using the scientific Python stack and Linux. Using a Raspberry Pi to control experimental paradigms, we build a completely open-source, HDF5-based analysis (spike sorting) toolkit in Python. This toolkit can be easily parallelized and scales to incorporate increasing electrode counts and longer recordings. Our rig costs about \$5000, an order of magnitude less than many comparable commercially available electrophysiology systems.}
 }
 
-@article {Mukherjee486043,
-	author = {Mukherjee, Narendra and Wachutka, Joseph and Katz, Donald B},
-	title = {Dynamical structure of cortical taste responses revealed by precisely-timed optogenetic perturbation},
-	year = {2018},
-	doi = {10.1101/486043},
-	publisher = {Cold Spring Harbor Laboratory},
-	abstract = {The purpose of perception is to drive action - during tasting, for instance, every stimulus necessarily drives either swallowing or ejecting ("gapes"). Taste responses in the rodent primary gustatory cortex (GC) span this sensorimotor divide, progressing through a series of firing rate epochs that culminate in the emergence of palatability-related firing. Population analyses reveal palatability-related activity to appear through sudden and coherent ensemble transitions that, despite occuring between 0.5s and 1.5s on individual trials, reliably precede gaping onset by 200-300ms. Here, we tested whether these transitions actually drive gaping, delivering 0.5s perturbations of GC at various points in tasting trials. Perturbations significantly delayed gaping, but only when they arrived before palatability coding. Thus, perturbation had no impact on trials in which the transition had already occurred, but the identical perturbation delayed gaping on trials in which it hadn{\textquoteright}t. Our results suggest a distributed attractor network model of taste processing, and a dynamical role for cortex in driving motor behavior.},
-	fulltext = {https://www.biorxiv.org/content/early/2018/12/03/486043.full.pdf},
-	journal = {bioRxiv}
+@article{mukherjee2019impact,
+  title={Impact of precisely-timed inhibition of gustatory cortex on taste behavior depends on single-trial ensemble dynamics},
+  author={Mukherjee, Narendra and Wachutka, Joseph and Katz, Donald B},
+  journal={eLife},
+  volume={8},
+  pages={e45968},
+  year={2019},
+  publisher={eLife Sciences Publications Limited},
+  fulltext={https://elifesciences.org/articles/45968},
+  abstract={Sensation and action are necessarily coupled during stimulus perception – while tasting, for instance, perception happens while an animal decides to expel or swallow the substance in the mouth (the former via a behavior known as ‘gaping’). Taste responses in the rodent gustatory cortex (GC) span this sensorimotor divide, progressing through firing-rate epochs that culminate in the emergence of action-related firing. Population analyses reveal this emergence to be a sudden, coherent and variably-timed ensemble transition that reliably precedes gaping onset by 0.2–0.3s. Here, we tested whether this transition drives gaping, by delivering 0.5s GC perturbations in tasting trials. Perturbations significantly delayed gaping, but only when they preceded the action-related transition - thus, the same perturbation impacted behavior or not, depending on the transition latency in that particular trial. Our results suggest a distributed attractor network model of taste processing, and a dynamical role for cortex in driving motor behavior.}
 }
 
 @article{flores2018role,
@@ -97,6 +98,15 @@
   doi={10.1101/lm.048181.118},
   fulltext={/publications/floresetal2018_lm.pdf},
   abstract={The strength of learned associations between pairs of stimuli is affected by multiple factors, the most extensively studied of which is prior experience with the stimuli themselves. In contrast, little data is available regarding how experience with “incidental” stimuli (independent of any conditioning situation) impacts later learning. This lack of research is striking given the importance of incidental experience to survival. We have recently begun to fill this void using conditioned taste aversion (CTA), wherein an animal learns to avoid a taste that has been associated with malaise. We previously demonstrated that incidental exposure to salty and sour tastes (taste preexposure—TPE) enhances aversions learned later to sucrose. Here, we investigate the neurobiology underlying this phenomenon. First, we use immediate early gene (c-Fos) expression to identify gustatory cortex (GC) as a site at which TPE specifically increases the neural activation caused by taste-malaise pairing (i.e., TPE did not change c-Fos induced by either stimulus in isolation). Next, we use site-specific infection with the optical silencer Archaerhodopsin-T to show that GC inactivation during TPE inhibits the expected enhancements of both learning and CTA-related c-Fos expression, a full day later. Thus, we conclude that GC is almost certainly a vital part of the circuit that integrates incidental experience into later associative learning.}
+}
+
+@article{levitan2019single,
+  title={Single and population coding of taste in the gustatory-cortex of awake mice},
+  author={Levitan, David and Lin, Jian-You and Wachutka, Joseph and Mukherjee, Narendra and Nelson, Sacha B and Katz, Donald B},
+  journal={Journal of Neurophysiology},
+  year={2019},
+  fulltext={https://www.physiology.org/doi/abs/10.1152/jn.00357.2019?af=R},
+  abstract={Electrophysiological analysis has revealed much about the broad coding and neural ensemble dynamics that characterize gustatory cortical (GC) taste processing in awake rats and about how these dynamics relate to behavior. With regard to mice, however, data concerning cortical taste coding have largely been restricted to imaging, a technique that reveals average levels of neural responsiveness but that (currently) lacks the temporal sensitivity necessary for evaluation of fast response dynamics; furthermore, the few extant studies have thus far failed to provide consensus on basic features of coding. We have recorded the spiking activity of ensembles of GC neurons while presenting representatives of the basic taste modalities (sweet, salty, sour, and bitter) to awake mice. Our first central result is the identification of similarities between rat and mouse taste processing: most mouse GC neurons (~66%) responded distinctly to multiple (3–4) tastes; temporal coding analyses further reveal, for the first time, that single mouse GC neurons sequentially code taste identity and palatability, the latter responses emerging ~0.5 s after the former, with whole GC ensembles transitioning suddenly and coherently from coding taste identity to coding taste palatability. The second finding is that spatial location plays very little role in any aspect of taste responses: neither between- (anterior-posterior) nor within-mouse (dorsal-ventral) mapping revealed anatomic regions with narrow or temporally simple taste responses. These data confirm recent results showing that mouse cortical taste responses are not “gustotopic” but also go beyond these imaging results to show that mice process tastes through time.}
 }
 
 

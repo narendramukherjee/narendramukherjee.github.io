@@ -9,13 +9,17 @@
 
 .. thumbnail:: images/Narendra.jpg
 
-I am a `Howard Hughes Medical Institute (HHMI) Predoctoral Fellow`_ working with `Donald Katz`_ in the Neuroscience graduate program at `Brandeis University`_. My broad research interests lie at the confluence of neuroscience, dynamical systems, machine learning and the evolutionary basis of animal behavior. In the Katz lab, I study how the processing of tastes in the brain leads to consumption or rejection decisions. For this work, I perform chronic electrophysiological recordings from large multi-electrode arrays implanted in rodents actively engaged in consumption tasks. I build probabilistic (Bayesian) graphical models to understand the neural population-level firing patterns obtained from such large-scale recordings; these statistical models, together with precisely-timed optogenetic perturbations of neural activity, have revealed a unique temporally-specific role for sensory cortex in taste-related decision making. To know more about my work with sensory cortical dynamics in the brain, please look at my `current research`_.
+I am a Machine Learning Scientist working at `TripAdvisor`_, one of the world's largest travel-related websites. I am broadly interested in Bayesian interpretations of machine learning/statistics: currently, I spend my days applying these tools to TripAdvisor's repository of large-scale structured and unstructured user-generated/business-related data. 
 
-Concurrently, I have also been involved in developing a flexible open-source electrophysiology hardware and software system that can combine optical fibers for optogenetics with long-term recordings from over 1000 electrodes in awake rodents at a fraction of the cost of commercially-available solutions. This technological development has been the centerpiece of my efforts to expand the adoption of reproducible hardware and software in electrophysiology-based research. Much of this work has been supported by the `Brandeis University Maker Lab`_ and cloud computing resources on the `Jetstream`_ supercomputer of the NSF.    
+I recently earned my PhD working with `Donald Katz`_ in the Neuroscience graduate program at `Brandeis University`_ where I was also a `Howard Hughes Medical Institute (HHMI) Predoctoral Fellow`_ . My PhD work lies at the confluence of neuroscience, dynamical systems, machine learning and the evolutionary basis of animal behavior. In the Katz lab, I studied how the processing of tastes in the brain leads to consumption or rejection decisions. For this work, I performed chronic electrophysiological recordings from large multi-electrode arrays implanted in rodents actively engaged in consumption tasks. I built probabilistic (Bayesian) graphical models to understand the neural population-level firing patterns obtained from such large-scale recordings; these statistical models, together with precisely-timed optogenetic perturbations of neural activity, have revealed a unique temporally-specific role for sensory cortex in taste-related decision making. To know more about this work, please look at my `PhD research`_.
 
-Previously, I worked with `Vijay Kumar Sharma`_ and `Sheeba Vasu`_ in the Evolutionary and Organismal Biology (EOBU) unit of the Jawaharlal Nehru Center for Advanced Scientific Research (JNCASR) in Bangalore. I studied eclosion and activity circadian rhythms in fruit flies from a dynamical systems perspective (based on Arthur Winfree's ideas).
+I am deeply committed to making research and machine learning tools more accessible through open-source contributions. During my PhD, the centerpiece of these efforts was the development of a flexible open-source electrophysiology hardware and software system that can combine optical fibers for optogenetics with long-term recordings from over 1000 electrodes in awake rodents at a fraction of the cost of commercially-available solutions. Much of this work was supported by the `Brandeis University Maker Lab`_ and cloud computing resources on the `Jetstream`_ supercomputer of the NSF.    
 
-For more information, read my `CV <CV.pdf>`_, look at my `current research`_, browse my `publication list`_ or explore my projects on `Github`_.
+Prior to my PhD, I worked with `Vijay Kumar Sharma`_ and `Sheeba Vasu`_ in the Evolutionary and Organismal Biology (EOBU) unit of the Jawaharlal Nehru Center for Advanced Scientific Research (JNCASR) in Bangalore. I studied eclosion and activity circadian rhythms in fruit flies from a dynamical systems perspective (based on Arthur Winfree's ideas).
+
+For more information, read my `CV <CV.pdf>`_, look at my `PhD research`_, browse my `publication list`_ or explore my projects on `Github`_.
+
+.. _TripAdvisor: https://tripadvisor.com
 
 .. _Howard Hughes Medical Institute (HHMI) Predoctoral Fellow: https://www.hhmi.org/news/hhmi-selects-46-international-predoctoral-fellows
 
@@ -31,7 +35,7 @@ For more information, read my `CV <CV.pdf>`_, look at my `current research`_, br
 
 .. _Sheeba Vasu: http://www.jncasr.ac.in/sheeba/
 
-.. _current research: /research/current-research/index.html
+.. _PhD research: /research/phd-research/index.html
 
 .. _publication list: /research/publication-list/index.html
 

@@ -2,7 +2,7 @@
 .. slug: string-completion-as-you-move-to-python-3-or-how-curly-braces-became-important
 .. date: 2017-02-03 22:00:23 UTC-05:00
 .. tags: Python
-.. category: 
+.. category: Blog
 .. link: 
 .. description: 
 .. type: text

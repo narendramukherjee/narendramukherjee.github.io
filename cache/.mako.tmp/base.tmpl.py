@@ -5,12 +5,12 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1544670963.6170936
+_modified_time = 1573927430.885958
 _enable_loop = True
-_template_filename = '/home/narendra/anaconda2/envs/website/lib/python3.6/site-packages/nikola/data/themes/bootstrap3/templates/base.tmpl'
+_template_filename = '/home/narendra/anaconda3/envs/website/lib/python3.8/site-packages/nikola/data/themes/bootstrap4/templates/base.tmpl'
 _template_uri = 'base.tmpl'
 _source_encoding = 'utf-8'
-_exports = ['extra_head', 'belowtitle', 'sourcelink', 'content', 'extra_js']
+_exports = ['extra_head', 'belowtitle', 'sourcelink', 'extra_header', 'content', 'extra_footer', 'extra_js']
 
 
 def _mako_get_namespace(context, name):
@@ -33,38 +33,42 @@ def render_body(context,**pageargs):
         _import_ns = {}
         _mako_get_namespace(context, 'base')._populate(_import_ns, ['*'])
         _mako_get_namespace(context, 'notes')._populate(_import_ns, ['*'])
-        show_sourcelink = _import_ns.get('show_sourcelink', context.get('show_sourcelink', UNDEFINED))
-        blog_title = _import_ns.get('blog_title', context.get('blog_title', UNDEFINED))
-        template_hooks = _import_ns.get('template_hooks', context.get('template_hooks', UNDEFINED))
         date_fanciness = _import_ns.get('date_fanciness', context.get('date_fanciness', UNDEFINED))
-        _link = _import_ns.get('_link', context.get('_link', UNDEFINED))
+        blog_title = _import_ns.get('blog_title', context.get('blog_title', UNDEFINED))
+        show_sourcelink = _import_ns.get('show_sourcelink', context.get('show_sourcelink', UNDEFINED))
+        theme_config = _import_ns.get('theme_config', context.get('theme_config', UNDEFINED))
         abs_link = _import_ns.get('abs_link', context.get('abs_link', UNDEFINED))
+        js_date_format = _import_ns.get('js_date_format', context.get('js_date_format', UNDEFINED))
+        set_locale = _import_ns.get('set_locale', context.get('set_locale', UNDEFINED))
+        momentjs_locales = _import_ns.get('momentjs_locales', context.get('momentjs_locales', UNDEFINED))
+        search_form = _import_ns.get('search_form', context.get('search_form', UNDEFINED))
+        def extra_header():
+            return render_extra_header(context._locals(__M_locals))
+        len = _import_ns.get('len', context.get('len', UNDEFINED))
         def content():
             return render_content(context._locals(__M_locals))
         logo_url = _import_ns.get('logo_url', context.get('logo_url', UNDEFINED))
-        def extra_head():
-            return render_extra_head(context._locals(__M_locals))
+        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
         def sourcelink():
             return render_sourcelink(context._locals(__M_locals))
-        momentjs_locales = _import_ns.get('momentjs_locales', context.get('momentjs_locales', UNDEFINED))
-        show_blog_title = _import_ns.get('show_blog_title', context.get('show_blog_title', UNDEFINED))
-        notes = _mako_get_namespace(context, 'notes')
         content_footer = _import_ns.get('content_footer', context.get('content_footer', UNDEFINED))
+        base = _mako_get_namespace(context, 'base')
+        translations = _import_ns.get('translations', context.get('translations', UNDEFINED))
+        navigation_alt_links = _import_ns.get('navigation_alt_links', context.get('navigation_alt_links', UNDEFINED))
+        navigation_links = _import_ns.get('navigation_links', context.get('navigation_links', UNDEFINED))
+        show_blog_title = _import_ns.get('show_blog_title', context.get('show_blog_title', UNDEFINED))
+        def extra_footer():
+            return render_extra_footer(context._locals(__M_locals))
         def belowtitle():
             return render_belowtitle(context._locals(__M_locals))
-        body_end = _import_ns.get('body_end', context.get('body_end', UNDEFINED))
+        def extra_head():
+            return render_extra_head(context._locals(__M_locals))
         lang = _import_ns.get('lang', context.get('lang', UNDEFINED))
-        js_date_format = _import_ns.get('js_date_format', context.get('js_date_format', UNDEFINED))
-        translations = _import_ns.get('translations', context.get('translations', UNDEFINED))
-        search_form = _import_ns.get('search_form', context.get('search_form', UNDEFINED))
-        post = _import_ns.get('post', context.get('post', UNDEFINED))
+        body_end = _import_ns.get('body_end', context.get('body_end', UNDEFINED))
         def extra_js():
             return render_extra_js(context._locals(__M_locals))
-        annotations = _import_ns.get('annotations', context.get('annotations', UNDEFINED))
-        base = _mako_get_namespace(context, 'base')
-        len = _import_ns.get('len', context.get('len', UNDEFINED))
-        set_locale = _import_ns.get('set_locale', context.get('set_locale', UNDEFINED))
-        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
+        _link = _import_ns.get('_link', context.get('_link', UNDEFINED))
+        template_hooks = _import_ns.get('template_hooks', context.get('template_hooks', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n')
@@ -80,24 +84,27 @@ def render_body(context,**pageargs):
         __M_writer(str(template_hooks['extra_head']()))
         __M_writer('\n</head>\n<body>\n<a href="#content" class="sr-only sr-only-focusable">')
         __M_writer(str(messages("Skip to main content")))
-        __M_writer('</a>\n\n<!-- Menubar -->\n\n<nav class="navbar navbar-inverse navbar-static-top">\n    <div class="container"><!-- This keeps the margins nice -->\n        <div class="navbar-header">\n            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">\n            <span class="sr-only">')
-        __M_writer(str(messages("Toggle navigation")))
-        __M_writer('</span>\n            <span class="icon-bar"></span>\n            <span class="icon-bar"></span>\n            <span class="icon-bar"></span>\n            </button>\n            <a class="navbar-brand" href="')
+        __M_writer('</a>\n\n<!-- Menubar -->\n\n<nav class="navbar navbar-expand-md static-top mb-4\n')
+        if theme_config.get('navbar_light'):
+            __M_writer('navbar-light bg-light\n')
+        else:
+            __M_writer('navbar-dark bg-dark\n')
+        __M_writer('">\n    <div class="container"><!-- This keeps the margins nice -->\n        <a class="navbar-brand" href="')
         __M_writer(str(abs_link(_link("root", None, lang))))
         __M_writer('">\n')
         if logo_url:
-            __M_writer('                <img src="')
+            __M_writer('            <img src="')
             __M_writer(str(logo_url))
             __M_writer('" alt="')
             __M_writer(filters.html_escape(str(blog_title)))
-            __M_writer('" id="logo">\n')
+            __M_writer('" id="logo" class="d-inline-block align-top">\n')
         __M_writer('\n')
         if show_blog_title:
-            __M_writer('                <span id="blog-title">')
+            __M_writer('            <span id="blog-title">')
             __M_writer(filters.html_escape(str(blog_title)))
             __M_writer('</span>\n')
-        __M_writer('            </a>\n        </div><!-- /.navbar-header -->\n        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">\n            <ul class="nav navbar-nav">\n                ')
-        __M_writer(str(base.html_navigation_links()))
+        __M_writer('        </a>\n        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">\n            <span class="navbar-toggler-icon"></span>\n        </button>\n\n        <div class="collapse navbar-collapse" id="bs-navbar">\n            <ul class="navbar-nav mr-auto">\n                ')
+        __M_writer(str(base.html_navigation_links_entries(navigation_links)))
         __M_writer('\n                ')
         __M_writer(str(template_hooks['menu']()))
         __M_writer('\n            </ul>\n')
@@ -105,7 +112,9 @@ def render_body(context,**pageargs):
             __M_writer('                ')
             __M_writer(str(search_form))
             __M_writer('\n')
-        __M_writer('\n            <ul class="nav navbar-nav navbar-right">\n                ')
+        __M_writer('\n            <ul class="navbar-nav navbar-right">\n                ')
+        __M_writer(str(base.html_navigation_links_entries(navigation_alt_links)))
+        __M_writer('\n                ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'belowtitle'):
             context['self'].belowtitle(**pageargs)
         
@@ -120,39 +129,44 @@ def render_body(context,**pageargs):
             __M_writer('\n')
         __M_writer('                ')
         __M_writer(str(template_hooks['menu_alt']()))
-        __M_writer('\n            </ul>\n        </div><!-- /.navbar-collapse -->\n    </div><!-- /.container -->\n</nav>\n\n<!-- End of Menubar -->\n\n<div class="container" id="content" role="main">\n    <div class="body-content">\n        <!--Body content-->\n        <div class="row">\n            ')
+        __M_writer('\n            </ul>\n        </div><!-- /.navbar-collapse -->\n    </div><!-- /.container -->\n</nav>\n\n<!-- End of Menubar -->\n\n<div class="container" id="content" role="main">\n    <div class="body-content">\n        <!--Body content-->\n        ')
         __M_writer(str(template_hooks['page_header']()))
-        __M_writer('\n            ')
+        __M_writer('\n        ')
+        if 'parent' not in context._data or not hasattr(context._data['parent'], 'extra_header'):
+            context['self'].extra_header(**pageargs)
+        
+
+        __M_writer('\n        ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'content'):
             context['self'].content(**pageargs)
         
 
-        __M_writer('\n        </div>\n        <!--End of body content-->\n\n        <footer id="footer">\n            ')
+        __M_writer('\n        <!--End of body content-->\n\n        <footer id="footer">\n            ')
         __M_writer(str(content_footer))
         __M_writer('\n            ')
         __M_writer(str(template_hooks['page_footer']()))
+        __M_writer('\n            ')
+        if 'parent' not in context._data or not hasattr(context._data['parent'], 'extra_footer'):
+            context['self'].extra_footer(**pageargs)
+        
+
         __M_writer('\n        </footer>\n    </div>\n</div>\n\n')
         __M_writer(str(base.late_load_js()))
-        __M_writer('\n    <script>$(\'a.image-reference:not(.islink) img:not(.islink)\').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>\n    <!-- fancy dates -->\n    <script>\n    moment.locale("')
-        __M_writer(str(momentjs_locales[lang]))
-        __M_writer('");\n    fancydates(')
-        __M_writer(str(date_fanciness))
-        __M_writer(', ')
-        __M_writer(str(js_date_format))
-        __M_writer(');\n    </script>\n    <!-- end fancy dates -->\n    ')
+        __M_writer('\n')
+        if date_fanciness != 0:
+            __M_writer('        <!-- fancy dates -->\n        <script>\n        moment.locale("')
+            __M_writer(str(momentjs_locales[lang]))
+            __M_writer('");\n        fancydates(')
+            __M_writer(str(date_fanciness))
+            __M_writer(', ')
+            __M_writer(str(js_date_format))
+            __M_writer(');\n        </script>\n        <!-- end fancy dates -->\n')
+        __M_writer('    ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'extra_js'):
             context['self'].extra_js(**pageargs)
         
 
-        __M_writer('\n')
-        if annotations and post and not post.meta('noannotations'):
-            __M_writer('        ')
-            __M_writer(str(notes.code()))
-            __M_writer('\n')
-        elif not annotations and post and post.meta('annotations'):
-            __M_writer('        ')
-            __M_writer(str(notes.code()))
-            __M_writer('\n')
+        __M_writer("\n    <script>\n    baguetteBox.run('div#content', {\n        ignoreClass: 'islink',\n        captions: function(element) {\n            return element.getElementsByTagName('img')[0].alt;\n    }});\n    </script>\n")
         __M_writer(str(body_end))
         __M_writer('\n')
         __M_writer(str(template_hooks['body_end']()))
@@ -183,11 +197,11 @@ def render_belowtitle(context,**pageargs):
         _import_ns = {}
         _mako_get_namespace(context, 'base')._populate(_import_ns, ['*'])
         _mako_get_namespace(context, 'notes')._populate(_import_ns, ['*'])
-        translations = _import_ns.get('translations', context.get('translations', UNDEFINED))
+        base = _mako_get_namespace(context, 'base')
         len = _import_ns.get('len', context.get('len', UNDEFINED))
+        translations = _import_ns.get('translations', context.get('translations', UNDEFINED))
         def belowtitle():
             return render_belowtitle(context)
-        base = _mako_get_namespace(context, 'base')
         __M_writer = context.writer()
         __M_writer('\n')
         if len(translations) > 1:
@@ -214,6 +228,20 @@ def render_sourcelink(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
+def render_extra_header(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        _import_ns = {}
+        _mako_get_namespace(context, 'base')._populate(_import_ns, ['*'])
+        _mako_get_namespace(context, 'notes')._populate(_import_ns, ['*'])
+        def extra_header():
+            return render_extra_header(context)
+        __M_writer = context.writer()
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
@@ -222,6 +250,20 @@ def render_content(context,**pageargs):
         _mako_get_namespace(context, 'notes')._populate(_import_ns, ['*'])
         def content():
             return render_content(context)
+        __M_writer = context.writer()
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
+def render_extra_footer(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        _import_ns = {}
+        _mako_get_namespace(context, 'base')._populate(_import_ns, ['*'])
+        _mako_get_namespace(context, 'notes')._populate(_import_ns, ['*'])
+        def extra_footer():
+            return render_extra_footer(context)
         __M_writer = context.writer()
         return ''
     finally:
@@ -244,6 +286,6 @@ def render_extra_js(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/home/narendra/anaconda2/envs/website/lib/python3.6/site-packages/nikola/data/themes/bootstrap3/templates/base.tmpl", "uri": "base.tmpl", "source_encoding": "utf-8", "line_map": {"23": 2, "26": 3, "29": 0, "69": 2, "70": 3, "71": 4, "72": 4, "73": 5, "74": 5, "79": 8, "80": 9, "81": 9, "82": 12, "83": 12, "84": 20, "85": 20, "86": 25, "87": 25, "88": 26, "89": 27, "90": 27, "91": 27, "92": 27, "93": 27, "94": 29, "95": 30, "96": 31, "97": 31, "98": 31, "99": 33, "100": 37, "101": 37, "102": 38, "103": 38, "104": 40, "105": 41, "106": 41, "107": 41, "108": 43, "113": 49, "114": 50, "115": 51, "120": 51, "121": 53, "122": 53, "123": 53, "124": 65, "125": 65, "130": 66, "131": 71, "132": 71, "133": 72, "134": 72, "135": 77, "136": 77, "137": 81, "138": 81, "139": 82, "140": 82, "141": 82, "142": 82, "147": 85, "148": 86, "149": 87, "150": 87, "151": 87, "152": 88, "153": 89, "154": 89, "155": 89, "156": 91, "157": 91, "158": 92, "159": 92, "165": 6, "174": 6, "180": 45, "192": 45, "193": 46, "194": 47, "195": 47, "196": 47, "197": 49, "203": 51, "217": 66, "231": 85, "245": 231}}
+{"filename": "/home/narendra/anaconda3/envs/website/lib/python3.8/site-packages/nikola/data/themes/bootstrap4/templates/base.tmpl", "uri": "base.tmpl", "source_encoding": "utf-8", "line_map": {"23": 2, "26": 3, "29": 0, "73": 2, "74": 3, "75": 4, "76": 4, "77": 5, "78": 5, "83": 8, "84": 9, "85": 9, "86": 12, "87": 12, "88": 17, "89": 18, "90": 19, "91": 20, "92": 22, "93": 24, "94": 24, "95": 25, "96": 26, "97": 26, "98": 26, "99": 26, "100": 26, "101": 28, "102": 29, "103": 30, "104": 30, "105": 30, "106": 32, "107": 39, "108": 39, "109": 40, "110": 40, "111": 42, "112": 43, "113": 43, "114": 43, "115": 45, "116": 47, "117": 47, "122": 52, "123": 53, "124": 54, "129": 54, "130": 56, "131": 56, "132": 56, "133": 67, "134": 67, "139": 68, "144": 69, "145": 73, "146": 73, "147": 74, "148": 74, "153": 75, "154": 80, "155": 80, "156": 81, "157": 82, "158": 84, "159": 84, "160": 85, "161": 85, "162": 85, "163": 85, "164": 89, "169": 89, "170": 97, "171": 97, "172": 98, "173": 98, "179": 6, "188": 6, "194": 48, "206": 48, "207": 49, "208": 50, "209": 50, "210": 50, "211": 52, "217": 54, "231": 68, "245": 69, "259": 75, "273": 89, "287": 273}}
 __M_END_METADATA
 """
