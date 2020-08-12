@@ -191,6 +191,7 @@ POSTS = (
     ("posts/*.md", "blog", "post.tmpl"),
     ("posts/*.txt", "blog", "post.tmpl"),
     ("posts/*.html", "blog", "post.tmpl"),
+    ("posts/*.ipynb", "blog", "post.tmpl")
 )
 PAGES = (
     ("pages/home.rst", "", "page.tmpl"),
