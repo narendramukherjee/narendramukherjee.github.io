@@ -194,3 +194,4 @@
 'render_taxonomies:output/categories/technology.xml', (522752, 670)
 'render_pages:output/blog/using-the-logitech-unifying-receiver-on-linux/index.html', (539136, 6062)
 'render_taxonomies:output/categories/technology/index.html', (552448, 2316)
+'copy_files:output/CV.tex', (563712, 229)
