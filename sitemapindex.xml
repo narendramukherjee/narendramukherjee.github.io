@@ -6,8 +6,12 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>https://narendramukherjee.github.io/categories/bayesian.xml</loc>
+  <lastmod>2020-10-14T21:00:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://narendramukherjee.github.io/categories/cat_blog.xml</loc>
-  <lastmod>2020-08-12T15:06:00Z</lastmod>
+  <lastmod>2020-10-14T21:00:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://narendramukherjee.github.io/categories/electrophysiology.xml</loc>
@@ -18,16 +22,20 @@
   <lastmod>2020-08-12T14:46:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://narendramukherjee.github.io/categories/machine-learning.xml</loc>
+  <lastmod>2020-10-14T21:00:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://narendramukherjee.github.io/categories/neuroscience.xml</loc>
   <lastmod>2020-08-12T14:46:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://narendramukherjee.github.io/categories/open-source.xml</loc>
-  <lastmod>2020-08-12T14:46:00Z</lastmod>
+  <lastmod>2020-10-14T21:00:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://narendramukherjee.github.io/categories/python.xml</loc>
-  <lastmod>2020-08-12T14:46:00Z</lastmod>
+  <lastmod>2020-10-14T21:00:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://narendramukherjee.github.io/categories/technology.xml</loc>
@@ -39,10 +47,10 @@
  </sitemap>
  <sitemap>
   <loc>https://narendramukherjee.github.io/rss.xml</loc>
-  <lastmod>2020-08-12T15:06:00Z</lastmod>
+  <lastmod>2020-10-14T21:00:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://narendramukherjee.github.io/sitemap.xml</loc>
-  <lastmod>2020-08-12T15:06:00Z</lastmod>
+  <lastmod>2020-10-14T21:00:00Z</lastmod>
  </sitemap>
 </sitemapindex>
