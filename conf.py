@@ -138,10 +138,12 @@ NAVIGATION_LINKS = {
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
 	("/blog/", "Blog"),
-	("/CV.pdf", "CV"),
+	((("/Narendra_resume.pdf", "2 page resume"),
+          ("/Narendra_CV.pdf", "Detailed academic CV")), 
+         "CV"),
 	((("/research/phd-research/index.html", "PhD Research"),
-	("/research/publication-list/index.html", "Publications")),
-	"Research")
+	  ("/research/publication-list/index.html", "Publications")),
+	 "Research")
     ),
 }
 

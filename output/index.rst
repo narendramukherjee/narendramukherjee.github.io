@@ -17,7 +17,7 @@ I am deeply committed to making research and machine learning tools more accessi
 
 Prior to my PhD, I worked with `Vijay Kumar Sharma`_ and `Sheeba Vasu`_ in the Evolutionary and Organismal Biology (EOBU) unit of the Jawaharlal Nehru Center for Advanced Scientific Research (JNCASR) in Bangalore. I studied eclosion and activity circadian rhythms in fruit flies from a dynamical systems perspective (based on Arthur Winfree's ideas).
 
-For more information, read my `CV <CV.pdf>`_, look at my `PhD research`_, browse my `publication list`_ or explore my projects on `Github`_.
+For more information, read my `CV <Narendra_CV.pdf>`_, look at my `PhD research`_, browse my `publication list`_ or explore my projects on `Github`_.
 
 .. _TripAdvisor: https://tripadvisor.com
 
