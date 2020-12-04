@@ -45,9 +45,13 @@ navbar-dark bg-dark
                 </li>
 <li class="nav-item active">
 <a href="." class="nav-link">Blog <span class="sr-only">(active)</span></a>
-                </li>
-<li class="nav-item">
-<a href="../CV.pdf" class="nav-link">CV</a>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CV</a>
+            <div class="dropdown-menu">
+                    <a href="../Narendra_resume.pdf" class="dropdown-item">2 page resume</a>
+                    <a href="../Narendra_CV.pdf" class="dropdown-item">Detailed academic CV</a>
+            </div>
             </li>
 <li class="nav-item dropdown">
 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research</a>
@@ -147,12 +151,12 @@ navbar-dark bg-dark
 <pre class="literal-block">2to3 -w *.py</pre>
 <p>I am in the habit of using % as a placeholder for string completion in Python 2.x. That behavior doesn't go out of use entirely in Python 3.x, but using the str.format() method is recommended instead - see more <a class="reference external" href="https://docs.python.org/2/library/string.html#format-string-syntax">details</a>.</p>
 <p>Most of string completion code worked out of the box in Python 3 - I only realized that the norm had changed when I had curly braces "<strong>{}</strong>" in my strings. It turns out that curly braces have a special meaning in Python 3 strings - they are placeholders, in addition to the % sign. The format goes something like this:</p>
-<pre class="code python"><a name="rest_code_75da7c56031b4f9891111a5c51db12cb-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s2">"my string {:d}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<a name="rest_code_75da7c56031b4f9891111a5c51db12cb-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s1">'my string 1'</span>
+<pre class="code python"><a name="rest_code_21083d117d40467ebb848a7b4531308b-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s2">"my string {:d}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="rest_code_21083d117d40467ebb848a7b4531308b-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s1">'my string 1'</span>
 </pre>
 <p>However, the braces themselves need to be encapsulated in a second set of braces to be printed. So, for example:</p>
-<pre class="code python"><a name="rest_code_2d628366ad5d4d41a35b949dcbb5a30a-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s2">"my string {{{:d}}}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<a name="rest_code_2d628366ad5d4d41a35b949dcbb5a30a-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s1">'my string {1}'</span>
+<pre class="code python"><a name="rest_code_ed5e7dccc4774ade81aeccb331c118e1-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s2">"my string {{{:d}}}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="rest_code_ed5e7dccc4774ade81aeccb331c118e1-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s1">'my string {1}'</span>
 </pre>
 <p>In brief, the braces outside the number placeholder <code>{:d}</code> have to be encapsulated in a second (or third, depending on how you look at it) set of braces :)</p>
 </div>
