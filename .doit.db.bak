@@ -66,7 +66,7 @@
 'copy_assets:output/assets/xml/atom.xsl', (332800, 605)
 'copy_assets:output/assets/css/images/ie6/borderBottomCenter.png', (50688, 489)
 'create_bundles', (51200, 56)
-'sitemap:output/sitemap.xml', (598016, 7469)
+'sitemap:output/sitemap.xml', (598016, 7465)
 'copy_assets:output/assets/js/html5.js', (331776, 602)
 'sitemap', (53760, 56)
 'robots_file', (54272, 56)
