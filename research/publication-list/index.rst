@@ -7,9 +7,17 @@
 .. description: List of publications
 .. type: text
 
-Publications
-============
+Journal Publications
+====================
 
-.. publication_list:: files/publications/publications_nm.bib
+.. publication_list:: files/publications/journal_publications_nm.bib
    :highlight_author: Narendra Mukherjee
    :detail_page_dir:
+   
+Conference Publications
+=======================
+
+.. publication_list:: files/publications/conf_publications_nm.bib
+   :highlight_author: Narendra Mukherjee
+   :detail_page_dir:
+

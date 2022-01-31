@@ -10,7 +10,7 @@
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="https://narendramukherjee.github.io/blog/when-features-go-missing-bayes-comes-to-the-rescue/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Narendra Mukherjee">
 <link rel="prev" href="../using-the-logitech-unifying-receiver-on-linux/" title="Using the Logitech Unifying Receiver on Linux" type="text/html">
@@ -31,10 +31,11 @@
 <!-- Menubar -->
 
 <nav class="navbar navbar-expand-md static-top mb-4
-navbar-dark bg-dark
+navbar-dark
+bg-dark
 "><div class="container">
 <!-- This keeps the margins nice -->
-        <a class="navbar-brand" href="https://narendramukherjee.github.io/">
+        <a class="navbar-brand" href="../../">
 
             <span id="blog-title">Narendra Mukherjee</span>
         </a>
@@ -108,12 +109,10 @@ navbar-dark bg-dark
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<p>In the midst of all the mess, one of the great things to grow out of the ongoing pandemic is the online conference. It has made it possible for so many more people to attend and learn from international conferences, in a way that doesn't break the bank or the work week!</p>
+    <p>In the midst of all the mess, one of the great things to grow out of the ongoing pandemic is the online conference. It has made it possible for so many more people to attend and learn from international conferences, in a way that doesn't break the bank or the work week!</p>
 <p>In that spirit, the <a class="reference external" href="https://global.pydata.org/">2020 Global PyData conference</a> has gone entirely online and consists of pre-recorded talks from speakers together with Q&amp;A sessions that are aligned to a variety of time zones. I was fortunate to have a part of my recent work at Tripadvisor be accepted at the conference for a 30 min talk; preparing and recording an online talk was a totally new experience for me, and I think I have learnt a lot of new presentation (and environment setup) skills in the process.</p>
 <p>In this talk, I go over the merit of thinking deeply about missing values in any real-world machine learning problem, especially those that involve tree-based models. I go on to talk about the imputation approach that we used while designing a recommendation system at Tripadvisor, and discuss how it can be thought of as a simplified Bayesian inference recipe in a probabilistic graph.</p>
 <p>I am really excited about the talk and the feedback I am going to get during the Q&amp;A session - do browse the <a class="reference external" href="../../pydata_global_talk/PyData_Global_2020.pdf">slides from the talk</a> in the meantime!</p>
-</div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/bayesian/" rel="tag">Bayesian</a></li>
@@ -126,7 +125,7 @@ navbar-dark bg-dark
                 <a href="../using-the-logitech-unifying-receiver-on-linux/" rel="prev" title="Using the Logitech Unifying Receiver on Linux">Previous post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
-            Contents © 2021         <a href="mailto:narendra.mukherjee@gmail.com">Narendra Mukherjee</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2022         <a href="mailto:narendra.mukherjee@gmail.com">Narendra Mukherjee</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
         </footer>
@@ -137,9 +136,7 @@ navbar-dark bg-dark
         <script src="../../assets/js/all-nocdn.js"></script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-    }});
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
     </script>
 </body>
 </html>

@@ -10,7 +10,7 @@
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="https://narendramukherjee.github.io/blog/string-completion-as-you-move-to-python-3-or-how-curly-braces-became-important/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Narendra Mukherjee">
 <link rel="prev" href="../installing-the-latest-version-of-texlive-2016-right-now-on-ubuntu-without-a-headache/" title="Installing the latest version of Texlive (2016 right now) on Ubuntu without a headache" type="text/html">
@@ -29,10 +29,11 @@
 <!-- Menubar -->
 
 <nav class="navbar navbar-expand-md static-top mb-4
-navbar-dark bg-dark
+navbar-dark
+bg-dark
 "><div class="container">
 <!-- This keeps the margins nice -->
-        <a class="navbar-brand" href="https://narendramukherjee.github.io/">
+        <a class="navbar-brand" href="../../">
 
             <span id="blog-title">Narendra Mukherjee</span>
         </a>
@@ -106,21 +107,19 @@ navbar-dark bg-dark
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<p>I am currently in the midst of (<strong>FINALLY!!</strong>) making the shift from trusted Python 2.7 to Python 3.x (while recovering from an extended holiday thanks to a somewhat lengthy visa renewal process). Making the shift itself is pretty simple, thanks to a nifty, command line tool built within the Python standard library itself (at least on Linux) called, very simply, <a class="reference external" href="https://docs.python.org/2/library/2to3.html">2to3</a>.</p>
+    <p>I am currently in the midst of (<strong>FINALLY!!</strong>) making the shift from trusted Python 2.7 to Python 3.x (while recovering from an extended holiday thanks to a somewhat lengthy visa renewal process). Making the shift itself is pretty simple, thanks to a nifty, command line tool built within the Python standard library itself (at least on Linux) called, very simply, <a class="reference external" href="https://docs.python.org/2/library/2to3.html">2to3</a>.</p>
 <p>Its always a good idea to keep backups of legacy code (of course!), and to actually write changes to file, so the command goes something like:</p>
 <pre class="literal-block">2to3 -w *.py</pre>
 <p>I am in the habit of using % as a placeholder for string completion in Python 2.x. That behavior doesn't go out of use entirely in Python 3.x, but using the str.format() method is recommended instead - see more <a class="reference external" href="https://docs.python.org/2/library/string.html#format-string-syntax">details</a>.</p>
 <p>Most of string completion code worked out of the box in Python 3 - I only realized that the norm had changed when I had curly braces "<strong>{}</strong>" in my strings. It turns out that curly braces have a special meaning in Python 3 strings - they are placeholders, in addition to the % sign. The format goes something like this:</p>
-<pre class="code python"><a name="rest_code_21083d117d40467ebb848a7b4531308b-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s2">"my string {:d}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<a name="rest_code_21083d117d40467ebb848a7b4531308b-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s1">'my string 1'</span>
+<pre class="code python"><a id="rest_code_5f37c5411b6e4542936e9a6232746af1-1" name="rest_code_5f37c5411b6e4542936e9a6232746af1-1" href="#rest_code_5f37c5411b6e4542936e9a6232746af1-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s2">"my string </span><span class="si">{:d}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="rest_code_5f37c5411b6e4542936e9a6232746af1-2" name="rest_code_5f37c5411b6e4542936e9a6232746af1-2" href="#rest_code_5f37c5411b6e4542936e9a6232746af1-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s1">'my string 1'</span>
 </pre>
 <p>However, the braces themselves need to be encapsulated in a second set of braces to be printed. So, for example:</p>
-<pre class="code python"><a name="rest_code_ed5e7dccc4774ade81aeccb331c118e1-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s2">"my string {{{:d}}}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<a name="rest_code_ed5e7dccc4774ade81aeccb331c118e1-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s1">'my string {1}'</span>
+<pre class="code python"><a id="rest_code_dbfba0775d784a889d98ce591ef242bc-1" name="rest_code_dbfba0775d784a889d98ce591ef242bc-1" href="#rest_code_dbfba0775d784a889d98ce591ef242bc-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s2">"my string {{</span><span class="si">{:d}</span><span class="s2">}}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="rest_code_dbfba0775d784a889d98ce591ef242bc-2" name="rest_code_dbfba0775d784a889d98ce591ef242bc-2" href="#rest_code_dbfba0775d784a889d98ce591ef242bc-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s1">'my string </span><span class="si">{1}</span><span class="s1">'</span>
 </pre>
 <p>In brief, the braces outside the number placeholder <code>{:d}</code> have to be encapsulated in a second (or third, depending on how you look at it) set of braces :)</p>
-</div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/python/" rel="tag">Python</a></li>
@@ -133,7 +132,7 @@ navbar-dark bg-dark
                 <a href="../open-source-neuroscience-at-boston-python/" rel="next" title="Open source neuroscience at Boston Python">Next post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
-            Contents © 2021         <a href="mailto:narendra.mukherjee@gmail.com">Narendra Mukherjee</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2022         <a href="mailto:narendra.mukherjee@gmail.com">Narendra Mukherjee</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
         </footer>
@@ -144,9 +143,7 @@ navbar-dark bg-dark
         <script src="../../assets/js/all-nocdn.js"></script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-    }});
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
     </script>
 </body>
 </html>

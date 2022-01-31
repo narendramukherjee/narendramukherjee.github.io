@@ -10,7 +10,7 @@
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="https://narendramukherjee.github.io/blog/using-the-logitech-unifying-receiver-on-linux/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Narendra Mukherjee">
 <link rel="prev" href="../open-source-neuroscience-at-boston-python/" title="Open source neuroscience at Boston Python" type="text/html">
@@ -29,10 +29,11 @@
 <!-- Menubar -->
 
 <nav class="navbar navbar-expand-md static-top mb-4
-navbar-dark bg-dark
+navbar-dark
+bg-dark
 "><div class="container">
 <!-- This keeps the margins nice -->
-        <a class="navbar-brand" href="https://narendramukherjee.github.io/">
+        <a class="navbar-brand" href="../../">
 
             <span id="blog-title">Narendra Mukherjee</span>
         </a>
@@ -106,10 +107,8 @@ navbar-dark bg-dark
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<p>After many years of continuous use (including WFH for the last few months), I decided to retire my old keyboard and mouse and jump on the Logitech ergonomic bandwagon with the MX Vertical mouse and the Ergo K860 keyboard. Both these devices are part of a line-up that Logitech is currently promoting for multi-tasking between several computers - they can each pair with 3 different computers, and can use a single <em>Unifying</em> receiver to pair to the same computer. I don't work with several devices at once, but would definitely like to not have more than the necessary number of receivers plugged into my computer; unfortunately, Logitech's unifying software only works with Windows/Mac, so I had to do some browsing to figure out a Linux alternative.</p>
+    <p>After many years of continuous use (including WFH for the last few months), I decided to retire my old keyboard and mouse and jump on the Logitech ergonomic bandwagon with the MX Vertical mouse and the Ergo K860 keyboard. Both these devices are part of a line-up that Logitech is currently promoting for multi-tasking between several computers - they can each pair with 3 different computers, and can use a single <em>Unifying</em> receiver to pair to the same computer. I don't work with several devices at once, but would definitely like to not have more than the necessary number of receivers plugged into my computer; unfortunately, Logitech's unifying software only works with Windows/Mac, so I had to do some browsing to figure out a Linux alternative.</p>
 <p>There's a nifty tool designed by <a class="reference external" href="https://twitter.com/Lekensteyn">Peter Wu</a> to get Logitech devices to work with Linux: <a class="reference external" href="https://github.com/Lekensteyn/ltunify">ltunify</a>. I tried it on Ubuntu 18.04 and it works perfectly out of the box to pair both my devices to the same computer using a single Unifying receiver. In addition, you may want to use <a class="reference external" href="https://pwr-solaar.github.io/Solaar/">Solaar</a> to get a nice system tray which displays battery levels, settings etc for each of your paired devices. You can pair upto six Logitech devices to a computer using one Unifying receiver.</p>
-</div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/technology/" rel="tag">Technology</a></li>
@@ -122,7 +121,7 @@ navbar-dark bg-dark
                 <a href="../when-features-go-missing-bayes-comes-to-the-rescue/" rel="next" title="When features go missing, Bayes' comes to the rescue">Next post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
-            Contents © 2021         <a href="mailto:narendra.mukherjee@gmail.com">Narendra Mukherjee</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2022         <a href="mailto:narendra.mukherjee@gmail.com">Narendra Mukherjee</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
         </footer>
@@ -133,9 +132,7 @@ navbar-dark bg-dark
         <script src="../../assets/js/all-nocdn.js"></script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-    }});
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
     </script>
 </body>
 </html>

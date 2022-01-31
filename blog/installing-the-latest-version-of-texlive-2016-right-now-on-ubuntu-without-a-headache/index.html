@@ -10,7 +10,7 @@
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="https://narendramukherjee.github.io/blog/installing-the-latest-version-of-texlive-2016-right-now-on-ubuntu-without-a-headache/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Narendra Mukherjee">
 <link rel="next" href="../string-completion-as-you-move-to-python-3-or-how-curly-braces-became-important/" title="String completion as you move to Python 3 (OR, how curly braces became important)" type="text/html">
@@ -29,10 +29,11 @@
 <!-- Menubar -->
 
 <nav class="navbar navbar-expand-md static-top mb-4
-navbar-dark bg-dark
+navbar-dark
+bg-dark
 "><div class="container">
 <!-- This keeps the margins nice -->
-        <a class="navbar-brand" href="https://narendramukherjee.github.io/">
+        <a class="navbar-brand" href="../../">
 
             <span id="blog-title">Narendra Mukherjee</span>
         </a>
@@ -106,15 +107,13 @@ navbar-dark bg-dark
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<p>Texlive is the most convenient way to get up and running with LaTeX on Linux (specifically Ubuntu, in this case) systems. A simple <code>sudo apt-get install texlive</code> does the trick - however, there's an important catch: Debian versions of texlive traditionally lag behind. Ubuntu 14.04 and 16.04 ship with the 2013 and 2015 versions respectively. So, when I had to look into updating texlive on my 14.04 system, I had no recourse but to try to attempt installing 'vanilla' texlive straight from CTAN, and of course, risk the consequences!</p>
+    <p>Texlive is the most convenient way to get up and running with LaTeX on Linux (specifically Ubuntu, in this case) systems. A simple <code>sudo apt-get install texlive</code> does the trick - however, there's an important catch: Debian versions of texlive traditionally lag behind. Ubuntu 14.04 and 16.04 ship with the 2013 and 2015 versions respectively. So, when I had to look into updating texlive on my 14.04 system, I had no recourse but to try to attempt installing 'vanilla' texlive straight from CTAN, and of course, risk the consequences!</p>
 <p>Turns out that installing texlive on CTAN can be a complicated mess of steps that need to be done in exactly the right order - but I came across this supremely helpful <a class="reference external" href="https://github.com/scottkosty/install-tl-ubuntu">Github repo</a> from Scott Kostyshak that makes everything super simple. One simply needs to clone this repository, and follow the steps in the readme, and things work smoothly (I've tested this on my Ubuntu 14.04 system).</p>
 <p>Here are the steps:</p>
 <pre class="literal-block">git clone https://github.com/scottkosty/install-tl-ubuntu
 cd install-tl-ubuntu
 sudo ./install-tl-ubuntu</pre>
 <p>NOTE: If you have the Debian version of texlive already installed (2013 in the case of Ubuntu 14.04 - to check your texlive version, say 'tex --version' at the terminal), you will need to remove it with <code>sudo apt-get remove --purge texlive*</code> first.</p>
-</div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/latex/" rel="tag">LaTeX</a></li>
@@ -125,7 +124,7 @@ sudo ./install-tl-ubuntu</pre>
                 <a href="../string-completion-as-you-move-to-python-3-or-how-curly-braces-became-important/" rel="next" title="String completion as you move to Python 3 (OR, how curly braces became important)">Next post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
-            Contents © 2021         <a href="mailto:narendra.mukherjee@gmail.com">Narendra Mukherjee</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2022         <a href="mailto:narendra.mukherjee@gmail.com">Narendra Mukherjee</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
         </footer>
@@ -136,9 +135,7 @@ sudo ./install-tl-ubuntu</pre>
         <script src="../../assets/js/all-nocdn.js"></script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-    }});
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
     </script>
 </body>
 </html>

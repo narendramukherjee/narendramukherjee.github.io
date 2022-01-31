@@ -10,7 +10,7 @@
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="https://narendramukherjee.github.io/blog/open-source-neuroscience-at-boston-python/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Narendra Mukherjee">
 <link rel="prev" href="../string-completion-as-you-move-to-python-3-or-how-curly-braces-became-important/" title="String completion as you move to Python 3 (OR, how curly braces became important)" type="text/html">
@@ -32,10 +32,11 @@
 <!-- Menubar -->
 
 <nav class="navbar navbar-expand-md static-top mb-4
-navbar-dark bg-dark
+navbar-dark
+bg-dark
 "><div class="container">
 <!-- This keeps the margins nice -->
-        <a class="navbar-brand" href="https://narendramukherjee.github.io/">
+        <a class="navbar-brand" href="../../">
 
             <span id="blog-title">Narendra Mukherjee</span>
         </a>
@@ -109,14 +110,12 @@ navbar-dark bg-dark
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<a class="reference external image-reference" href="../../images/boston_python_1.jpg"><img alt="/images/boston_python_1.thumbnail.jpg" src="../../images/boston_python_1.thumbnail.jpg"></a>
+    <a class="reference external image-reference" href="../../images/boston_python_1.jpg"><img alt="/images/boston_python_1.thumbnail.jpg" src="../../images/boston_python_1.thumbnail.jpg"></a>
 <a class="reference external image-reference" href="../../images/boston_python_3.jpg"><img alt="/images/boston_python_3.thumbnail.jpg" src="../../images/boston_python_3.thumbnail.jpg"></a>
 <a class="reference external image-reference" href="../../images/boston_python_2.jpg"><img alt="/images/boston_python_2.thumbnail.jpg" src="../../images/boston_python_2.thumbnail.jpg"></a>
 <p>Last week, my labmate <a class="reference external" href="https://sites.google.com/a/brandeis.edu/katzlab/people/current/joseph-wachutka">Joseph Wachutka</a> and I got an opportunity to talk to the <a class="reference external" href="https://www.meetup.com/bostonpython/">Boston Python User Group</a> about our efforts in developing open-source tools in Python for electrophysiology. Boston Python is an amazing mix of Python-lovers, both seasoned and novice, who are always ready to listen, ask incisive questions and offer great feedback! It was enlightening (and very encouraging!) to talk to people interested in pushing open source - many of the questions from the audience were right on target and brought forth the very involved hardware and software challenges we have hacked around in the last few years.</p>
 <p>Despite being a central technique in systems neuroscience, electrophysiology has been dominated by expensive proprietary technologies. Throughout our PhD work, Joe and I have tried to develop open source tools (mostly using the Raspberry Pi, Linux and Python) that help us run experiments and record, clean and analyze data. Apart from reducing the costs of performing complex electrophysiological and optogenetic studies by an order of magnitude, we hope that these efforts will make our science easier to share and reproduce (and shouldn't that be the ultimate goal for all scientists anyways?).</p>
 <p>Here are the <a class="reference external" href="../../boston_python_talk/index.html">slides</a> for my talk at Boston Python. Please do read about our <a class="reference external" href="https://sites.google.com/a/brandeis.edu/katzlab/technology">Raspberry Pi based hardware setup</a> and our recent <a class="reference external" href="http://conference.scipy.org/proceedings/scipy2017/narendra_mukherjee.html">Scipy Paper</a> describing our HDF5-based data management and analysis pipeline.</p>
-</div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/electrophysiology/" rel="tag">electrophysiology</a></li>
@@ -132,7 +131,7 @@ navbar-dark bg-dark
                 <a href="../using-the-logitech-unifying-receiver-on-linux/" rel="next" title="Using the Logitech Unifying Receiver on Linux">Next post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
-            Contents © 2021         <a href="mailto:narendra.mukherjee@gmail.com">Narendra Mukherjee</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2022         <a href="mailto:narendra.mukherjee@gmail.com">Narendra Mukherjee</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
         </footer>
@@ -143,9 +142,7 @@ navbar-dark bg-dark
         <script src="../../assets/js/all-nocdn.js"></script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-    }});
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
     </script>
 </body>
 </html>
