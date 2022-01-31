@@ -63,17 +63,6 @@
   abstract={Whereas many laboratory-studied decisions involve a highly trained animal identifying an ambiguous stimulus, many naturalistic decisions do not. Consumption decisions, for instance, involve determining whether to eject or consume an already identified stimulus in the mouth and are decisions that can be made without training. By standard analyses, rodent cortical single-neuron taste responses come to predict such consumption decisions across the 500 ms preceding the consumption or rejection itself; decision-related firing emerges well after stimulus identification. Analyzing single-trial ensemble activity using hidden Markov models, we show these decision-related cortical responses to be part of a reliable sequence of states (each defined by the firing rates within the ensemble) separated by brief state-to-state transitions, the latencies of which vary widely between trials. When we aligned data to the onset of the (late-appearing) state that dominates during the time period in which single-neuron firing is correlated to taste palatability, the apparent ramp in stimulus-aligned choice-related firing was shown to be a much more precipitous coherent jump. This jump in choice-related firing resembled a step function more than it did the output of a standard (ramping) decision-making model, and provided a robust prediction of decision latency in single trials. Together, these results demonstrate that activity related to naturalistic consumption decisions emerges nearly instantaneously in cortical ensembles.}
 }
 
-@InProceedings{ narendra_mukherjee-proc-scipy-2017,
-  author    = { Narendra Mukherjee and Joseph Wachutka and Donald B Katz },
-  title     = { {P}ython meets systems neuroscience: affordable, scalable and open-source electrophysiology in awake, behaving rodents },
-  booktitle = { {P}roceedings of the 16th {P}ython in {S}cience {C}onference },
-  pages     = { 98 - 105 },
-  year      = { 2017 },
-  doi       = { 10.25080/shinma-7f4c6e7-00e },
-  fulltext={/publications/mukherjeeetal2017_scipy.pdf},
-  abstract  = {In-vivo electrophysiology, the recording of neurons in the brains of awake, behaving animals, is currently undergoing paradigm shifts. There is a push towards moving to open-source technologies that can: 1) be adjusted to specific experiments; 2) be shared with ease; and 3) more affordably record from larger numbers of electrodes simultaneously. Here we describe our construction of a system that satisfies these three desirable properties using the scientific Python stack and Linux. Using a Raspberry Pi to control experimental paradigms, we build a completely open-source, HDF5-based analysis (spike sorting) toolkit in Python. This toolkit can be easily parallelized and scales to incorporate increasing electrode counts and longer recordings. Our rig costs about \$5000, an order of magnitude less than many comparable commercially available electrophysiology systems.}
-}
-
 @article{mukherjee2019impact,
   title={Impact of precisely-timed inhibition of gustatory cortex on taste behavior depends on single-trial ensemble dynamics},
   author={Mukherjee, Narendra and Wachutka, Joseph and Katz, Donald B},
@@ -121,10 +110,11 @@
 @article{Lin2020amygdala,
   title = {Perturbation of amygdala-cortical projections reduces ensemble coherence of palatability coding in gustatory cortex},
   author = {Lin, Jian-You and Mukherjee, Narendra and Bernstein, Max J and Katz, Donald B},
-  journal = {bioRxiv},
-  year = {2020},
-  doi = {10.1101/2020.12.02.406900},
-  publisher = {Cold Spring Harbor Laboratory},
-  fulltext = {https://www.biorxiv.org/content/early/2020/12/03/2020.12.02.406900},
+  journal={eLife},
+  volume={10},
+  pages={e65766},
+  year={2021},
+  publisher={eLife Sciences Publications Limited},
+  fulltext={https://doi.org/10.7554/eLife.65766},
   abstract = {Taste palatability is centrally involved in consumption decisions - we ingest foods that taste good and reject those that don't. Gustatory cortex (GC) and basolateral amygdala (BLA) almost certainly work together to mediate palatability-driven behavior, but the precise nature of their interplay during taste decision-making is still unknown. Here, we take a step toward filling this gap in our knowledge, by investigating the specific role that activity in the BLA->GC pathway plays in the emergence of palatability-related firing in GC response dynamics (which influence consumption decisions). We implanted electrode/optical-fiber probes in virally-prepared female Long-Evans rats, such that we could optogenetically hyperpolarize BLA->GC axons, perturbing activity in these axons without affecting BLA and GC somas, while recording GC neural responses to intra-oral presentations of a diverse taste battery. This inter-regional axonal perturbation strongly altered GC taste responses, but despite the laser illumination being tonic for the first 2s that the taste was on the tongue, the alterations were far from monolithic: rather than changing all moments of the response equally, or causing a simple exponential decay of changes, the perturbation was most strongly felt at the onset times of previously-described response epochs; furthermore, the effect was epoch-specific - perturbations had little impact on the amount of taste identity information in the "middle epoch" of the responses, but reduced evidence of palatability-related activity in the "late-epoch." Finally, BLA->GC axon inhibition affected the nature of the epochal dynamics themselves, such that the normal abruptness of the behaviorally-relevant ensemble transitions into the palatability-related epoch was greatly diminished. These results suggest that BLA "organizes" behavior-related GC taste dynamics.}
 }
