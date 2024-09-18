@@ -112,13 +112,13 @@ bg-dark
 <pre class="literal-block">2to3 -w *.py</pre>
 <p>I am in the habit of using % as a placeholder for string completion in Python 2.x. That behavior doesn't go out of use entirely in Python 3.x, but using the str.format() method is recommended instead - see more <a class="reference external" href="https://docs.python.org/2/library/string.html#format-string-syntax">details</a>.</p>
 <p>Most of string completion code worked out of the box in Python 3 - I only realized that the norm had changed when I had curly braces "<strong>{}</strong>" in my strings. It turns out that curly braces have a special meaning in Python 3 strings - they are placeholders, in addition to the % sign. The format goes something like this:</p>
-<pre class="code python"><a id="rest_code_5f37c5411b6e4542936e9a6232746af1-1" name="rest_code_5f37c5411b6e4542936e9a6232746af1-1" href="#rest_code_5f37c5411b6e4542936e9a6232746af1-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s2">"my string </span><span class="si">{:d}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<a id="rest_code_5f37c5411b6e4542936e9a6232746af1-2" name="rest_code_5f37c5411b6e4542936e9a6232746af1-2" href="#rest_code_5f37c5411b6e4542936e9a6232746af1-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s1">'my string 1'</span>
-</pre>
+<div class="code"><pre class="code python"><a id="rest_code_0b50aa45e43a460abb1176f755727687-1" name="rest_code_0b50aa45e43a460abb1176f755727687-1" href="#rest_code_0b50aa45e43a460abb1176f755727687-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s2">"my string </span><span class="si">{:d}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="rest_code_0b50aa45e43a460abb1176f755727687-2" name="rest_code_0b50aa45e43a460abb1176f755727687-2" href="#rest_code_0b50aa45e43a460abb1176f755727687-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s1">'my string 1'</span>
+</pre></div>
 <p>However, the braces themselves need to be encapsulated in a second set of braces to be printed. So, for example:</p>
-<pre class="code python"><a id="rest_code_dbfba0775d784a889d98ce591ef242bc-1" name="rest_code_dbfba0775d784a889d98ce591ef242bc-1" href="#rest_code_dbfba0775d784a889d98ce591ef242bc-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s2">"my string {{</span><span class="si">{:d}</span><span class="s2">}}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<a id="rest_code_dbfba0775d784a889d98ce591ef242bc-2" name="rest_code_dbfba0775d784a889d98ce591ef242bc-2" href="#rest_code_dbfba0775d784a889d98ce591ef242bc-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s1">'my string </span><span class="si">{1}</span><span class="s1">'</span>
-</pre>
+<div class="code"><pre class="code python"><a id="rest_code_d1b9b3c2436c487fb518f315b4220614-1" name="rest_code_d1b9b3c2436c487fb518f315b4220614-1" href="#rest_code_d1b9b3c2436c487fb518f315b4220614-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s2">"my string {{</span><span class="si">{:d}</span><span class="s2">}}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="rest_code_d1b9b3c2436c487fb518f315b4220614-2" name="rest_code_d1b9b3c2436c487fb518f315b4220614-2" href="#rest_code_d1b9b3c2436c487fb518f315b4220614-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s1">'my string </span><span class="si">{1}</span><span class="s1">'</span>
+</pre></div>
 <p>In brief, the braces outside the number placeholder <code>{:d}</code> have to be encapsulated in a second (or third, depending on how you look at it) set of braces :)</p>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
@@ -132,7 +132,7 @@ bg-dark
                 <a href="../open-source-neuroscience-at-boston-python/" rel="next" title="Open source neuroscience at Boston Python">Next post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
-            Contents © 2022         <a href="mailto:narendra.mukherjee@gmail.com">Narendra Mukherjee</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2024         <a href="mailto:narendra.mukherjee@gmail.com">Narendra Mukherjee</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
         </footer>
