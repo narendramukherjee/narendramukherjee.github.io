@@ -9,9 +9,9 @@
 
 .. thumbnail:: images/Narendra.jpg
 
-I am a Research Scientist working at the `Philips Research headquarters`_ in Eindhoven in the Netherlands. I am broadly interested in Bayesian interpretations of machine learning/statistics, as well as software solutions to better productionize data and ML products.   
+I am a Senior Machine Learning Scientist working at the `Booking.com headquarters`_ in Amsterdam in the Netherlands. I am broadly interested in Bayesian interpretations of machine learning/statistics, as well as software solutions to better productionize data and ML products. At Booking, I work primarily on ML models of multi-touch attribution and how these can have impact on marketing incrementality measurement and bidding optimization.
 
-Previously, I was a Machine Learning Scientist at `Tripadvisor`_, based at their headquarters in the suburbs of Boston in the US. During my time at Tripadvisor, I worked on applying probabilistic machine learning methods to TripAdvisor's repository of large-scale structured and unstructured user-generated/business-related data. 
+Previously, I have worked as a Research Scientist at `Philips Research`_ in Eindhoven in the Netherlands and as a a Machine Learning Scientist at `Tripadvisor`_ in Boston in the US. In these roles, I worked on a variety of ML topics ranging from recommendation systems and NLP to marketing budget optimization. 
 
 Prior to that, I earned my PhD working with `Prof. Donald Katz`_ in the Neuroscience graduate program at `Brandeis University`_ where I was also a `Howard Hughes Medical Institute (HHMI) Predoctoral Fellow`_ . My PhD work lies at the confluence of neuroscience, dynamical systems, machine learning and the evolutionary basis of animal behavior. In the Katz lab, I studied how the processing of tastes in the brain leads to consumption or rejection decisions. For this work, I performed chronic electrophysiological recordings from large multi-electrode arrays implanted in rodents actively engaged in consumption tasks. I built probabilistic (Bayesian) graphical models to understand the neural population-level firing patterns obtained from such large-scale recordings; these statistical models, together with precisely-timed optogenetic perturbations of neural activity, have revealed a unique temporally-specific role for sensory cortex in taste-related decision making. To know more about this work, please look at my `PhD research`_.
 
@@ -21,7 +21,9 @@ Aside from work, I am also passionate about cycling and how bicycles are key to 
 
 For more information, read my `CV <Narendra_CV.pdf>`_, look at my `PhD research`_, browse my `publication list`_ or explore my projects on `Github`_.
 
-.. _Philips Research headquarters: https://www.philips.com/a-w/about/innovation/research.html
+.. _Booking.com headquarters: https://careers.booking.com/locations/amsterdam/
+
+.. _Philips Research: https://www.philips.com/a-w/about/innovation/research.html
 
 .. _TripAdvisor: https://tripadvisor.com
 
